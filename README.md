@@ -26,4 +26,4 @@ allprojects {
 	        implementation 'com.github.D10NGYANG:DLPopWindowTest:1.0.0'
 	}
 ```
-![仿微信弹窗](https://img-blog.csdnimg.cn/20190315090704413.png =200x356)
+![](DLPopWindowTest/img/demo.png)
