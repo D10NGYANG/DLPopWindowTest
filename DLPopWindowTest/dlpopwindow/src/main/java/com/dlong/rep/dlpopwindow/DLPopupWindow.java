@@ -2,6 +2,7 @@ package com.dlong.rep.dlpopwindow;
 
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
+import android.support.annotation.DrawableRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -92,5 +93,10 @@ public class DLPopupWindow extends PopupWindow{
                 llBG.setBackgroundResource(R.drawable.menu_open);
                 break;
         }
+    }
+
+    public void setContentViewBg(@DrawableRes int resid) {
+        LinearLayout llBG = (LinearLayout) mContentView.findViewById(R.id.ll_bg);
+        llBG.setBackgroundResource(resid);
     }
 }

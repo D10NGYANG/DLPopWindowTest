@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(item);
         popupWindow = new DLPopupWindow(mContext, mList, DLPopupWindow.STYLE_DEF);*/
 
+        popupWindow.setContentViewBg(com.dlong.rep.dlpopwindow.R.drawable.menu_open);
         popupWindow.setOnItemClickListener(new DLPopupWindow.OnItemClickListener() {
             @Override
             public void OnClick(int position) {
