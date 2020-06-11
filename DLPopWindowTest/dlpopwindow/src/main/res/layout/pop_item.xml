@@ -9,6 +9,9 @@
         <variable
             name="popItem"
             type="DLPopItem" />
+        <variable
+            name="iconColor"
+            type="int" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,6 +25,8 @@
             android:layout_height="0dp"
             android:layout_marginStart="20dp"
             android:adjustViewBounds="true"
+            android:tint="@{iconColor}"
+            android:tintMode="multiply"
             android:visibility="@{popItem.iconResId == 0? View.GONE: View.VISIBLE}"
             app:layout_constraintBottom_toBottomOf="@+id/ll_text"
             app:layout_constraintStart_toStartOf="parent"

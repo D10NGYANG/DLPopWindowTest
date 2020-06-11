@@ -9,6 +9,7 @@ import java.io.Serializable
  */
 data class DLPopItem(
         var iconResId: Int = R.drawable.ic_baseline_error_24,
+        var iconColorValue: Int = 0xffffffff.toInt(),
 
         var textTitle: String = "",
 

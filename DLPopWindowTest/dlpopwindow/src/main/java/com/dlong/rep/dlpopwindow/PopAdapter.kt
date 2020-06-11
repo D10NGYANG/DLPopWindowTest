@@ -27,6 +27,7 @@ class PopAdapter constructor(
 
         fun bind(info: DLPopItem) {
             binding.popItem = info
+            binding.iconColor = info.iconColorValue
             binding.executePendingBindings()
         }
     }

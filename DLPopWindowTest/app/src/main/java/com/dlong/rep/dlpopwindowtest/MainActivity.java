@@ -26,13 +26,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DLPopItem item = new DLPopItem(R.mipmap.message, "发起群聊", "消息在这里");
+        int color = 0xffffffff;
+        DLPopItem item = new DLPopItem(R.mipmap.message, color, "发起群聊", "消息在这里");
         mList.add(item);
-        item = new DLPopItem(R.mipmap.add_friend, "添加朋友", "消息在这里");
+        item = new DLPopItem(R.mipmap.add_friend, color, "添加朋友", "消息在这里");
         mList.add(item);
-        item = new DLPopItem(R.mipmap.scaning, "扫一扫", "消息在这里");
+        item = new DLPopItem(R.mipmap.scaning, color, "扫一扫", "消息在这里");
         mList.add(item);
-        item = new DLPopItem(R.mipmap.pay, "收付款", "消息在这里");
+        item = new DLPopItem(R.mipmap.pay, color, "收付款", "消息在这里");
         mList.add(item);
         popupWindow = new DLPopupWindow(mContext, mList);
         popupWindow.setOnItemClickListener(new DLPopupWindow.OnItemClickListener() {
