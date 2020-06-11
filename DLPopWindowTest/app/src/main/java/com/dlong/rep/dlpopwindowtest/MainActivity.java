@@ -1,13 +1,16 @@
 package com.dlong.rep.dlpopwindowtest;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.dlong.rep.dlpopwindow.DLPopItem;
 import com.dlong.rep.dlpopwindow.DLPopupWindow;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,27 +26,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DLPopItem item = new DLPopItem(R.mipmap.message, "发起群聊", 0xffffff);
+        DLPopItem item = new DLPopItem(R.mipmap.message, "发起群聊", "消息在这里");
         mList.add(item);
-        item = new DLPopItem(R.mipmap.add_friend, "添加朋友", 0xffffff);
+        item = new DLPopItem(R.mipmap.add_friend, "添加朋友", "消息在这里");
         mList.add(item);
-        item = new DLPopItem(R.mipmap.scaning, "扫一扫", 0xffffff);
+        item = new DLPopItem(R.mipmap.scaning, "扫一扫", "消息在这里");
         mList.add(item);
-        item = new DLPopItem(R.mipmap.pay, "收付款", 0xffffff);
+        item = new DLPopItem(R.mipmap.pay, "收付款", "消息在这里");
         mList.add(item);
-        popupWindow = new DLPopupWindow(mContext, mList, DLPopupWindow.STYLE_WEIXIN);
-
-        /*DLPopItem item = new DLPopItem(0, "添加设备", 0x888888);
-        mList.add(item);
-        item = new DLPopItem(0, "扫一扫", 0x888888);
-        mList.add(item);
-        popupWindow = new DLPopupWindow(mContext, mList, DLPopupWindow.STYLE_DEF);*/
-
-        popupWindow.setContentViewBg(com.dlong.rep.dlpopwindow.R.drawable.menu_open);
+        popupWindow = new DLPopupWindow(mContext, mList);
         popupWindow.setOnItemClickListener(new DLPopupWindow.OnItemClickListener() {
             @Override
-            public void OnClick(int position) {
-                Toast.makeText(mContext, mList.get(position).getText(), Toast.LENGTH_SHORT).show();
+            public void onClick(int position, @NotNull DLPopItem item) {
+                Toast.makeText(mContext, item.getTextTitle(), Toast.LENGTH_SHORT).show();
             }
         });
     }

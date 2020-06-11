@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="colorPrimary">#ededed</color>
     <color name="colorPrimaryDark">#ededed</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="colorPopupTittle">#ffffff</color>
+    <color name="colorPopupNormal">#aaaaaa</color>
+    <color name="colorPopupHint">#888888</color>
 </resources>
