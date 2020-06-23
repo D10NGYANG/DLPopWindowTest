@@ -12,6 +12,7 @@ data class DLPopItem(
         // 图片
         var iconResId: Int = R.drawable.ic_baseline_error_24,
         var iconColorValue: Int = 0xffffffff.toInt(),
+        var iconPadding: Int = 0,
         // 图片背景
         var iconBgResId: Int = 0,
         var iconBgColorValue: Int = 0xffffffff.toInt(),

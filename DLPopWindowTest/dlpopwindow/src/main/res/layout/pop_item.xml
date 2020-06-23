@@ -28,6 +28,7 @@
             android:tintMode="multiply"
             android:visibility="@{popItem.iconResId == 0? View.GONE: View.VISIBLE}"
             android:backgroundTint="@{popItem.iconBgColorValue}"
+            android:padding="@{popItem.iconPadding}"
             app:layout_constraintBottom_toBottomOf="@+id/ll_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/ll_text"

@@ -27,19 +27,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         int color = 0xffffffff;
-        DLPopItem item = new DLPopItem(R.mipmap.message, color,
+        DLPopItem item = new DLPopItem(R.mipmap.message, color,0,
                 0,0,0,0,
                 0.5f,0, "发起群聊", "消息在这里");
         mList.add(item);
-        item = new DLPopItem(R.mipmap.add_friend, color,
+        item = new DLPopItem(R.mipmap.add_friend, color,0,
                 0,0,0,0,
                 0.5f,0,  "添加朋友", "消息在这里");
         mList.add(item);
-        item = new DLPopItem(R.mipmap.scaning, color,
+        item = new DLPopItem(R.mipmap.scaning, color,0,
                 0,0,0,0,
                 0.5f,0,  "扫一扫", "消息在这里");
         mList.add(item);
-        item = new DLPopItem(R.mipmap.pay, color,
+        item = new DLPopItem(R.mipmap.pay, color,0,
                 0,0,0,0,
                 0.5f,0,  "收付款", "消息在这里");
         mList.add(item);
