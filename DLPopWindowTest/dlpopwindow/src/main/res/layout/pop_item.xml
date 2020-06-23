@@ -9,15 +9,14 @@
         <variable
             name="popItem"
             type="DLPopItem" />
-        <variable
-            name="iconColor"
-            type="int" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_item"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:backgroundTint="@{popItem.itemBgColorValue}"
+        app:itemBgSrcInt="@{popItem.itemBgResId}">
 
         <ImageView
             android:id="@+id/img_icon"
@@ -25,13 +24,15 @@
             android:layout_height="0dp"
             android:layout_marginStart="20dp"
             android:adjustViewBounds="true"
-            android:tint="@{iconColor}"
+            android:tint="@{popItem.iconColorValue}"
             android:tintMode="multiply"
             android:visibility="@{popItem.iconResId == 0? View.GONE: View.VISIBLE}"
+            android:backgroundTint="@{popItem.iconBgColorValue}"
             app:layout_constraintBottom_toBottomOf="@+id/ll_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/ll_text"
             app:srcCompat="@drawable/ic_baseline_error_24"
+            app:bgSrcInt="@{popItem.iconBgResId}"
             app:srcInt="@{popItem.iconResId}" />
 
         <LinearLayout
@@ -83,8 +84,9 @@
             android:id="@+id/divider"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:alpha="0.5"
+            android:alpha="@{popItem.dividerAlpha}"
             android:background="?android:attr/listDivider"
+            android:backgroundTint="@{popItem.dividerColorValue}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
