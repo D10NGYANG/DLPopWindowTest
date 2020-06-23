@@ -42,6 +42,12 @@ data class DLPopItem(
         }
 
         @JvmStatic
+        @BindingAdapter("srcColor")
+        fun setImageColor(img: ImageView, srcColor: Int) {
+            img.setColorFilter(srcColor)
+        }
+
+        @JvmStatic
         @BindingAdapter("itemBgSrcInt")
         fun setConstraintLayoutBgRes(cl: ConstraintLayout, bgSrcInt: Int) {
             cl.setBackgroundResource(bgSrcInt)

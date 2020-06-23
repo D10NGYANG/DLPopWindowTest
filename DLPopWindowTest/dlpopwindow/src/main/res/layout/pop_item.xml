@@ -21,19 +21,18 @@
         <ImageView
             android:id="@+id/img_icon"
             android:layout_width="30dp"
-            android:layout_height="0dp"
+            android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:adjustViewBounds="true"
-            android:tint="@{popItem.iconColorValue}"
-            android:tintMode="multiply"
-            android:visibility="@{popItem.iconResId == 0? View.GONE: View.VISIBLE}"
             android:backgroundTint="@{popItem.iconBgColorValue}"
             android:padding="@{popItem.iconPadding}"
+            android:visibility="@{popItem.iconResId == 0? View.GONE: View.VISIBLE}"
+            app:bgSrcInt="@{popItem.iconBgResId}"
+            app:srcColor="@{popItem.iconColorValue}"
             app:layout_constraintBottom_toBottomOf="@+id/ll_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/ll_text"
             app:srcCompat="@drawable/ic_baseline_error_24"
-            app:bgSrcInt="@{popItem.iconBgResId}"
             app:srcInt="@{popItem.iconResId}" />
 
         <LinearLayout

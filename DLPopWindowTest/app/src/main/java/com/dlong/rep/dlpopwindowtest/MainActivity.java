@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int color = 0xffffffff;
+        int color = 0;
         DLPopItem item = new DLPopItem(R.mipmap.message, color,0,
                 0,0,0,0,
                 0.5f,0, "发起群聊", "消息在这里");
